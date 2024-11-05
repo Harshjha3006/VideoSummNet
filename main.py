@@ -48,8 +48,7 @@ def train(config):
             loss = criterion(preds.squeeze(0),y.squeeze(0))
             loss.backward()
             loss_history.append(loss.data)
-        if epoch % 10 == 0:
-         print(f"Epoch {epoch} loss : {torch.stack(loss_history).mean()}")
+        print(f"Epoch {epoch} loss : {torch.stack(loss_history).mean()}")
 
 
 
